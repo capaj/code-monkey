@@ -1,0 +1,43 @@
+{
+    "name": "code-monkey",
+    "displayName": "code-monkey",
+    "description": "repeats the words you have entered previously in the autocomplete",
+    "version": "0.0.1",
+    "publisher": "capaj",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [],
+        "configuration": {
+            "type": "object",
+            "title": "code-monkey",
+            "properties": {
+                "vscode-monkey.maximumRecords": {
+                "type": "number",
+                "default": 12,
+                "description": "size limit for remembered items"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.2.2",
+        "vscode": "^1.1.0",
+        "mocha": "^3.2.0",
+        "eslint": "^3.19.0",
+        "@types/node": "^7.0.12",
+        "@types/mocha": "^2.2.40"
+    }
+}
