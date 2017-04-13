@@ -1,6 +1,6 @@
 const vscode = require('vscode')
 const _ = require('lodash')
-const maxLength = 10
+const config = vscode.workspace.getConfiguration('code-monkey')
 const nonAlphaRegex = /[^a-zA-Z\d\s:]/
 const alphaRegex = /^\w+$/
 const monkeyWords = []
@@ -8,6 +8,7 @@ const monkeyWords = []
 function activate(context) {
   let cursorPosition = null
   let startNewWord = true
+  const maxLength = config.maximumRecords
 
   function addWord (word) {
     word = word.trim()

@@ -20,10 +20,10 @@
             "type": "object",
             "title": "code-monkey",
             "properties": {
-                "vscode-monkey.maximumRecords": {
-                "type": "number",
-                "default": 12,
-                "description": "size limit for remembered items"
+                "code-monkey.maximumRecords": {
+                    "type": "number",
+                    "default": 12,
+                    "description": "size limit for remembered items"
                 }
             }
         }
